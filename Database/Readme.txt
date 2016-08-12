@@ -1,2 +1,2 @@
 Geeks vs Bugs
-	Database
+	Database Directory
