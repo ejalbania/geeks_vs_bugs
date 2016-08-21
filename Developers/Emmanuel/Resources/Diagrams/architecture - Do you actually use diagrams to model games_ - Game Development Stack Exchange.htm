@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>architecture - Do you actually use diagrams to model games? - Game Development Stack Exchange</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/Sites/gamedev/img/favicon.ico?v=a17a1dcca8de">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/Sites/gamedev/img/apple-touch-icon.png?v=0cfb55927bd2">
+    <link rel="search" type="application/opensearchdescription+xml" title="Game Development Stack Exchange" href="http://gamedev.stackexchange.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@StackGameDev">
+    <meta name="twitter:domain" content="gamedev.stackexchange.com">
+    <meta property="og:type" content="website">    
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/gamedev/img/apple-touch-icon@2.png?v=9bca23db2259&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Do you actually use diagrams to model games?">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I mean mostly UML but any method that works is viable. So - do you actually model your games with UML/other diagrams or different methods? I had a subject at my university about modelling with UML ...">
+    <meta property="og:url" content="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games">
+    <link rel="canonical" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games">
+
+    
+    
+    <script type="text/javascript" async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/ados"></script><script async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/quant.js"></script><script async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/beacon.js"></script><script async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/analytics.js"></script><script type="text/javascript" async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/ados.js"></script><script src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/jquery.min.js"></script>
+    <script src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/all.css">
+
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:2,shownCommentCount:2,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:55429});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('53', '55429');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('53');
+                StackExchange.realtime.subscribeToTopBarNotifications('53');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1471794325,"routeName":"Questions/Show","site":{"name":"Game Development Stack Exchange","description":"Q&A for professional and independent game developers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":53,"enableInsertDocLinkDialog":false,"enableSocialMediaInSharePopup":true},"user":{"fkey":"276dd480edca0cdc9d5e15af570aef9b","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"fd09991aa6d6","js/moderator.en.js":"2be157203f0c","js/full-anon.en.js":"9f6038d81692","js/full.en.js":"f59a9279a0b6","js/wmd.en.js":"dc51078c84ec","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"71d3e40fd6df","js/help.en.js":"b50417081cc4","js/tageditor.en.js":"2178711359dd","js/tageditornew.en.js":"511df03b52b0","js/inline-tag-editing.en.js":"4fa1a4a3339e","js/revisions.en.js":"db5a160e1690","js/review.en.js":"48bdcd1b2416","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"6bb4a20283f6","js/explore-qlist.en.js":"2a9a628fca7f","js/events.en.js":"9a8e62fa4d42","js/keyboard-shortcuts.en.js":"273790c5f3c5","js/external-editor.en.js":"683ce04845f3","js/external-editor.en.js":"683ce04845f3","js/snippet-javascript.en.js":"b45759e6e55e","js/snippet-javascript-codemirror.en.js":"823586268fff"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/full-anon.en.js"></script><script async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/snippet-javascript.en.js"></script><script async="" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/post-validation.en.js"></script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><script type="text/javascript" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/adFeedback.js"></script><link rel="stylesheet" href="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/adFeedback.css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://gamedev.stackexchange.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+                    <a href="http://chat.stackexchange.com/?tab=site&amp;host=gamedev.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://gamedev.stackexchange.com/" class="current-site-link site-link js-gps-track" data-id="53" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-gamedev" title="Game Development"></div>
+        Game Development
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.gamedev.stackexchange.com/" class="site-link js-gps-track" data-id="54" data-gps-track="
+            site.switch({ target_site:54, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-gamedevmeta" title="Game Development Meta"></div>
+        Game Development Meta
+    </a>
+
+                </li>
+        </ul>
+    </div>
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://gamedev.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fgamedev.stackexchange.com%2fquestions%2f55429%2fdo-you-actually-use-diagrams-to-model-games" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://gamedev.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fgamedev.stackexchange.com%2fquestions%2f55429%2fdo-you-actually-use-diagrams-to-model-games" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+                <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites">
+                    <span class="hidden-text">Stack Exchange</span>
+                </a>
+
+    <a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" class="topbar-icon icon-achievements yes-hover js-achievements-button" data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://gamedev.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fgamedev.stackexchange.com%2fquestions%2f55429%2fdo-you-actually-use-diagrams-to-model-games" class="login-link">sign up</a>
+                                <a href="https://gamedev.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fgamedev.stackexchange.com%2fquestions%2f55429%2fdo-you-actually-use-diagrams-to-model-games" class="login-link">log in</a>
+
+                            <a href="http://gamedev.stackexchange.com/tour">tour</a>
+        <a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" class="icon-help js-help-button" title="Help Center and other resources">
+            help
+            <span class="triangle"></span>
+        </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://gamedev.stackexchange.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://gamedev.stackexchange.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.gamedev.stackexchange.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+                                            </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://gamedev.stackexchange.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://gamedev.stackexchange.com/">
+                    Game Development
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://gamedev.stackexchange.com/questions">Questions</a></li>
+                                                <li><a id="nav-tags" href="http://gamedev.stackexchange.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://gamedev.stackexchange.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://gamedev.stackexchange.com/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://gamedev.stackexchange.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://gamedev.stackexchange.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/Sites/gamedev/img/apple-touch-icon.png?v=0cfb55927bd2">
+
+
+    <div id="herobox">
+        <div id="hero-content">
+                <div id="close"><a title="click to minimize">_</a></div>
+            <div id="blurb">
+                Game Development Stack Exchange is a question and answer site for professional and independent game developers. Join them; it only takes a minute:
+                <br>
+                <br>
+                <a href="http://gamedev.stackexchange.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fgamedev.stackexchange.com%2fquestions%2f55429%2fdo-you-actually-use-diagrams-to-model-games" id="tell-me-more" class="button">Sign up</a>
+            </div>
+            <div id="desc">
+                <b>Here's how it works:</b>
+                <ol id="hiw">
+                    <li id="q">Anybody can ask a question
+                    </li>
+                    <li id="an">Anybody can answer
+                    </li>
+                    <li id="b">The best answers are voted up and rise to the top
+                    </li>
+                </ol>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games" class="question-hyperlink">Do you actually use diagrams to model games? [closed]</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="55429" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk846725597",4).enableDynamicSiteSelection().setZone(29); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk846725597"><iframe id="ados_frame_adzerk846725597_1876393" frameborder="0" scrolling="no" height="90" width="728" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/saved_resource.html"></iframe><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="55429">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">16</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#">favorite</a>
+        <div class="favoritecount"><b>14</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I mean mostly UML but any method that works is viable. So - do you actually model your games with UML/other diagrams or different methods? I had a subject at my university about modelling with UML and it seemed like more effort than actual benefit but I realise that might be only because I've never created a huge complex IT system. So is it worth the while and what types of diagrams/methods are usually* the best?</p>
+
+<p>*Of course, many times concrete tools need be chosen to concrete problems but maybe there are some patterns.</p>
+
+<p><strong>Edit:</strong> I forgot one important thing - do you create diagrams <strong>before</strong> or <strong>after</strong> implementing stuff? What I mean is - when one designs and implements something one usually changes mind or something unexpected comes up and one has to make changes, sometimes major ones - and doing them in already complex diagrams seems equally hopeless as in the code itself.</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://gamedev.stackexchange.com/questions/tagged/architecture" class="post-tag js-gps-track" title="show questions tagged &#39;architecture&#39;" rel="tag">architecture</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://gamedev.stackexchange.com/q/55429" title="short permalink to this question" class="short-link" id="link-post-55429">share</a><span class="lsep">|</span><a href="http://gamedev.stackexchange.com/posts/55429/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://gamedev.stackexchange.com/posts/55429/revisions" title="show all edits to this post">edited <span title="2013-05-14 07:59:04Z" class="relativetime">May 14 '13 at 7:59</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details">
+        user15805
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2013-05-13 18:12:44Z" class="relativetime">May 13 '13 at 18:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://gamedev.stackexchange.com/users/30239/nps"><div class="gravatar-wrapper-32"><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/ff923c90c5fecb1b234474060fe62e7f" alt="" width="32" height="32" data-evernote-hover-show="true"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://gamedev.stackexchange.com/users/30239/nps">NPS</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,232</span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="29 bronze badges"><span class="badge3"></span><span class="badgecount">29</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                    <tr>
+            <td class="special-status" colspan="2">
+                <div class="question-status">
+        <h2>                    <b>closed</b> as primarily opinion-based by <a href="http://gamedev.stackexchange.com/users/1430/josh-petrie">Josh Petrie</a><span class="mod-flair" title="moderator">♦</span> <span dir="ltr"><span title="2014-01-01 19:36:05Z" class="relativetime">Jan 1 '14 at 19:36</span></span>
+</h2>
+        <p>Many good questions generate some degree of opinion based on expert experience, but answers to this question   will tend to be almost entirely based on opinions, rather than facts, references, or specific expertise.<span class="close-status-suffix">If this question can be reworded to fit the rules in the <a href="http://gamedev.stackexchange.com/help/closed-questions">help center</a>, please <a href="http://gamedev.stackexchange.com/posts/55429/edit">edit the question</a>.</span></p>
+    </div>
+            </td>
+        </tr>
+    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-55429" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-96199" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">5</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This is more of a programming related question in general, so have a look at this question: <a href="http://programmers.stackexchange.com/questions/152997/truly-useful-uml-diagrams" title="truly useful uml diagrams">programmers.stackexchange.com/questions/152997/…</a></span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/26250/congusbongus" title="8,691 reputation" class="comment-user">congusbongus</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96199_55429"><span title="2013-05-14 06:28:57Z" class="relativetime-clean">May 14 '13 at 6:28</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-96201" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thx for the link but I actually deliberately put this question here - I wanted to see if gamedev is similar in this aspect to other IT fields.</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/30239/nps" title="1,232 reputation" class="comment-user owner">NPS</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96201_55429"><span title="2013-05-14 07:55:00Z" class="relativetime-clean">May 14 '13 at 7:55</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-55429" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								6 Answers
+                                <span style="display:none;" itemprop="answerCount">6</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="55455"></a>
+<div id="answer-55455" class="answer" data-answerid="55455" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="55455">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">18</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I like to think that everything around us can be represented, one way or another, through a diagram. Even if it is just a linear diagram representing the transition between the states of a particular object throughout time (like a living being, going through a number of states from birth to death). I use diagrams to lay down my thoughts and ideas for the actual implementation. I improvise quite a lot.</p>
+
+<p>Therefore, my diagrams are most of the time at a very high level, and feel like <a href="https://en.wikipedia.org/wiki/Mind_map"><em>mind maps</em></a>.</p>
+
+<p>To throw some examples in, this is actually a class inheritance map (one that's been cut) in my game where Interactive Object is the base type.</p>
+
+<p><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/1s2Re.jpg" alt="Interactive Object is the base type" data-evernote-hover-show="true"></p>
+
+<p>This is an FSM (<a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine</a>)  diagram for a spikes trap (those awesome traps on which you step and <em>woosh</em> spikes show up from the ground).</p>
+
+<p><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/YNWYK.jpg" alt="FSM diagram for a simple spike trap" data-evernote-hover-show="true"></p>
+
+<p>This is a <em>handbook</em> diagram (named this way because it's intended to be a <em>come back to it often</em> diagram) that I drew recently. It outlines the components of a game, and also helps with gathering the required assets, as you can see immediately what's needed and what isn't. I recommend these on small projects, as they get pretty huge on big ones. They can be broadened further though, so that may fix things.</p>
+
+<p><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/V8HqE.jpg" alt="Game overview" data-evernote-hover-show="true"></p>
+
+<p>When I go to a lower level, it's usually because I need to plan the most intricate aspects of my architecture, and I usually deal with UML there. I never concentrate on outputting absolutely clean and correct UML though. I've adopted what I liked the most about the UML convention, and turned it into a nice mindmap-ish UML. It's simple and does the job for me, but I wouldn't go with it in an environment where actual UML is expected, for obvious reasons.</p>
+
+<p>Another situation when I have to go to a lower level is when I have to describe actual algorithms. I use what I call <em>flow diagrams</em>. It is a format inspired by the diagrams used in <a href="http://www.codeproject.com/Articles/37111/White-Box-Testing-Technique"><em>white box testing</em></a>.</p>
+
+<p>A sample for the spike trap that I drew right now would look like this:
+<img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/URUyU.jpg" alt="More detailed spike trap flowchart" data-evernote-hover-show="true"></p>
+
+<p>This is normally the final layer between diagrams and actual algorithm implementations. If the need arises, I detail the flow diagrams further (with extra executed instructions), and deduce or estimate complexity, and build accurate test cases.
+I also prefer diagrams over pseudocode.</p>
+
+<p>Not that related to game development, I also have a nice format to describe the screens in a multi-screen app, the functionality that the user can trigger on each screen, and the relationship between screens. I normally build these before starting the actual development, and they act like a map throughout the development process. If it's for a client, the screen diagram is even more useful! It helps me go through all of the project, from start to beginning, and take into consideration all of the functionality that it's going to need. Therefore, it's invaluable to providing an accurate cost and time estimate.</p>
+
+<p>So yeah, I definitely diagram everything and anything. If I have an idea, I can and will definitely draw a diagram for it. If I somehow start a project without at least a very broad diagram to back me up, I feel crippled.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://gamedev.stackexchange.com/a/55455" title="short permalink to this answer" class="short-link" id="link-post-55455">share</a><span class="lsep">|</span><a href="http://gamedev.stackexchange.com/posts/55455/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://gamedev.stackexchange.com/posts/55455/revisions" title="show all edits to this post">edited <span title="2013-05-17 12:42:26Z" class="relativetime">May 17 '13 at 12:42</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-05-14 04:08:03Z" class="relativetime">May 14 '13 at 4:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details">
+        user15805
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-55455" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-96203" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">On a sidenote, did you used yEd for the diagrams? I find it very handy.</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/3644/kromster" title="6,082 reputation" class="comment-user">Kromster</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96203_55455"><span title="2013-05-14 08:03:16Z" class="relativetime-clean">May 14 '13 at 8:03</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-96236" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Exactly! Glad to see another yEd user. I've been using it a lot in the past years, it's my current favorite.</span>
+		            –&nbsp;<span class="comment-user">user15805</span>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96236_55455"><span title="2013-05-14 12:34:28Z" class="relativetime-clean">May 14 '13 at 12:34</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-96647" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">+1 for yed. The only downside is, the UML is not intuitive at all. But for every other diagram its amazing for a free app.</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/17256/sidar" title="2,581 reputation" class="comment-user">Sidar</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96647_55455"><span title="2013-05-17 13:23:24Z" class="relativetime-clean">May 17 '13 at 13:23</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-99169" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I used yEd to design my behavior trees for AiGameDev's AI competition.</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/27374/nick-caplinger" title="704 reputation" class="comment-user">Nick Caplinger</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment99169_55455"><span title="2013-06-08 19:27:34Z" class="relativetime-clean">Jun 8 '13 at 19:27</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-55455" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1930184093",4).enableDynamicSiteSelection().setZone(30); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1930184093"><iframe id="ados_frame_adzerk1930184093_1876394" frameborder="0" scrolling="no" height="90" width="728" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/saved_resource(1).html"></iframe><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/i(1).gif"></div>
+  
+<a name="55430"></a>
+<div id="answer-55430" class="answer" data-answerid="55430" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="55430">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">15</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I certainly do -  both structural and behavioral - my rule of thumb is that I make diagrams when the cost of making the diagram is less than trying to remember what the hell I was thinking a month later - or when I need to clearly explain myself to some other developer</p>
+
+<p>Class diagrams when the inheritance hierarchy becomes sufficiently complex</p>
+
+<p>Object diagrams when things like instantiation of objects becomes something bordering on the creation of a Frankenstein monster from disparate parts - especially useful in kitchen sink vertex and pixel shader users, to make sure all of the requisite bits are pushed through the pipe</p>
+
+<p>Sequence diagrams when the detailed interactions between a set of objects become complex - this is extremely useful in modeling complex render flows where previously computed information is needed at barely related downstream locations</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://gamedev.stackexchange.com/a/55430" title="short permalink to this answer" class="short-link" id="link-post-55430">share</a><span class="lsep">|</span><a href="http://gamedev.stackexchange.com/posts/55430/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-05-13 18:26:16Z" class="relativetime">May 13 '13 at 18:26</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://gamedev.stackexchange.com/users/30566/mark-mullin"><div class="gravatar-wrapper-32"><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/7920ede5a9e331ed6836a12acb497462" alt="" width="32" height="32" data-evernote-hover-show="true"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://gamedev.stackexchange.com/users/30566/mark-mullin">Mark Mullin</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">424</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-55430" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-96137" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I forgot one important thing - do you create diagrams <b>before</b> or <b>after</b> implementing stuff? What I mean is - when one designs and implements something one usually changes mind or something unexpected comes up and one has to make changes, sometimes major ones - and doing them in already complex diagrams seems equally hopeless as in the code itself.</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/30239/nps" title="1,232 reputation" class="comment-user owner">NPS</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96137_55430"><span title="2013-05-13 18:36:01Z" class="relativetime-clean">May 13 '13 at 18:36</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-96141" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">6</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">ah ha - depends -  whichever way works for the problem at hand - sometimes its easier to fiddle up the code and then diagram it, sometimes its easier to diagram it and then build it -  I don't have a hard and fast rule for that one</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/30566/mark-mullin" title="424 reputation" class="comment-user">Mark Mullin</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96141_55430"><span title="2013-05-13 18:52:40Z" class="relativetime-clean">May 13 '13 at 18:52</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-96202" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Mark: that bit should be a part of the answer ;)</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/3644/kromster" title="6,082 reputation" class="comment-user">Kromster</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96202_55430"><span title="2013-05-14 08:00:29Z" class="relativetime-clean">May 14 '13 at 8:00</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-55430" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="55451"></a>
+<div id="answer-55451" class="answer" data-answerid="55451" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="55451">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">8</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p><strong>Diagrams are a great way to communicate, document and aid your design</strong>, and design is the most significant part of software development. UML has a lot of features but you are not meant to use them all at the same time, only the ones that are useful.</p>
+
+<p>When navigating in a new city, do you actually stop and look at a map, rather than just continue and follow signs? That's what design vs coding is about. When things are unfamiliar, when the problem is complex, when you feel lost, that's when thinking about design is most helpful, and it's better to do it earlier than later. <a href="http://c2.com/cgi/wiki?DesignBeforeCoding">It's much easier to change your design before you've implemented anything</a>.</p>
+
+<p>Diagrams are a great way to visualise the problem and help your design, especially for visual thinkers (which is <a href="http://en.wikipedia.org/wiki/Visual_thinking#Visual_thinking">most of us</a> on gamedev I'd imagine). A lot of problems become trivial, defects become obvious, when it's clearly mapped on a diagram. Some issues you may find in a diagram:</p>
+
+<ul>
+<li>Too many connections to a single component? You may have a <a href="https://en.wikipedia.org/wiki/God_object">god object</a> that is hard to maintain</li>
+<li>Too many interconnections? Maybe the <a href="http://en.wikipedia.org/wiki/Modular_programming">modularity</a> can be improved, to make the architecture less fragile</li>
+<li>Too many pathways between two components? Perhaps you have <a href="http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">tight coupling</a></li>
+<li>For high-performance applications such as games, are there too many components involved in the hot path or inner loop? This may impact your performance</li>
+<li>Most of the time however, the diagram will show inconsistencies between the design you envisioned, and the actual implementation</li>
+</ul>
+
+<p>Furthermore, diagrams are great for communicating and documenting your design, either to non-technical people or people who are new to your project - and remember, in 6-months time you are practically new to the project too!</p>
+
+<p>How you use UML should be driven from these considerations. Diagramming for your own sake? Use whatever notation you are most comfortable with. Collaborating with other developers? Try to include the details of API calls, message types, directions of dependencies. Discussing architecture? <a href="https://en.wikipedia.org/wiki/Black_box">Black boxes</a> and simple connections will suffice. <a href="http://saturnnetwork.wordpress.com/2010/10/22/five-reasons-developers-dont-use-uml-and-six-reasons-to-use-it/">No-one uses the full set of UML features anyway</a>, plus it is very useful as a set of standardised notation that many people understand - whereas my napkin doodles may be incomprehensible to you and vice versa.</p>
+
+<p>As for myself, I use diagrams all the time - simple notepad drawings for personal projects, simple UML diagrams at work. <a href="http://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png">This UML diagram</a> is what I'd consider too complex, and one that I'd never make because the cost of producing and maintaining it outweighs its benefit, but of course YMMV.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://gamedev.stackexchange.com/a/55451" title="short permalink to this answer" class="short-link" id="link-post-55451">share</a><span class="lsep">|</span><a href="http://gamedev.stackexchange.com/posts/55451/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-05-14 03:02:41Z" class="relativetime">May 14 '13 at 3:02</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://gamedev.stackexchange.com/users/26250/congusbongus"><div class="gravatar-wrapper-32"><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/fGGK5.jpg" alt="" width="32" height="32" data-evernote-hover-show="true"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://gamedev.stackexchange.com/users/26250/congusbongus">congusbongus</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">8,691</span><span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span><span title="55 bronze badges"><span class="badge3"></span><span class="badgecount">55</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-55451" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-96306" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">One huge question for you - IIUC, you're trying to stick with simple diagrams (always). But diagrams are usually needed when the application gets complicated. <b>How do you keep diagrams small and simple when modelling vast and complex systems?</b></span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/30239/nps" title="1,232 reputation" class="comment-user owner">NPS</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96306_55451"><span title="2013-05-14 18:43:08Z" class="relativetime-clean">May 14 '13 at 18:43</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-96353" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@NPS It depends on the purpose/target audience, and in my experience you can still use simple diagrams to model complex systems. Usually what you have are many different simple diagrams for different people, or showing different aspects of the system - that's partly why there are different types of diagrams in UML. Complex systems are usually complex in the sense that they have many aspects or layers, which are all simple in isolation. Truly complex systems are very rare, because they tend to be very difficult to understand by the best experts.</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/26250/congusbongus" title="8,691 reputation" class="comment-user">congusbongus</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96353_55451"><span title="2013-05-15 00:05:35Z" class="relativetime-clean">May 15 '13 at 0:05</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-55451" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="55453"></a>
+<div id="answer-55453" class="answer" data-answerid="55453" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="55453">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">8</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I'd say there are two types of diagrams. Formal diagrams and scribbles.</p>
+
+<p>Regarding formal diagrams, I do them when I'm working with other programmers, but I rarely do so when I'm programming alone.</p>
+
+<p>However, that doesn't mean I sit and code whatever comes to mind. In my opinion, the most important thing when programming (or actually anything in life) is to <em>think first and do later</em>.</p>
+
+<p>Coding is a very mechanical task. You type and words appear on the screen. The idea is that by the time you start coding, you should have already solved the problem at hand. Making scribbles is a great way to sort your thoughts, and even force yourself to do the thinking that you need to do the coding part correctly. Scribbles are not meant to be saved for future reference, just so you can understand your thought processes easily.</p>
+
+<p>Don't worry if you take too much time thinking. I think that a good balance happens when you dedicate 90% of your time thinking and 10% coding. I've met several "senior" programmers who live by "we don't have time to think, just to do". But even if they call their code "done" earlier than those who do take the time to think about what they're doing, they (or the unlucky souls left afterwards) then spend countless hours fixing and patching something that should have been built correctly from the beginning.</p>
+
+<p>The best thing is that thinking is free! you don't have to be sitting on your computer to think. You can think about the code while you're eating, commuting, exercising... In fact, the best ideas come when you least expect them, so keep your mind open at all times, and only start coding when you really know what you're going to code.</p>
+
+<p>Here's a <a href="http://thedailywtf.com/Articles/The-Great-Pyramid-of-Agile.aspx">related article</a> that I happen to agree with.</p>
+
+<p><strong>Edit</strong>: Regarding the actual format and type of diagrams, I'd recommend you go freestyle, and actually handwritten instead of using prepackaged tools. Remember that the point is to help you in your thought process, so feel free to draw whatever you like. Semantics are whatever you like them to be, and they may be different between diagrams, and even between different parts of the diagram.</p>
+
+<p>There are three main benefits with freestyle/handwritten diagrams over prepackaged tools:</p>
+
+<ol>
+<li><p>You're not forced to abide to the type of diagram supported by whatever tool you choose. Sometimes mapminds will work, sometimes something more like UML will be fine, while other times a logic diagram will do. Other times a completely custom diagram is what works, and no tool can give you all the flexibility of freestyle diagrams (try punching a hole through the paper and continuing on the reverse side of the paper, in your favorite package, and see what happens)</p></li>
+<li><p>You will spend more time actually diagramming instead of using the tool. Regardless of the tool, pen and paper is always faster at diagramming than keyboarding and mousing through menus to find the specific elements you're looking for.</p></li>
+<li><p>You don't need a computer to handwrite. Most of the time I'm doing complex designs, I do them in a library, a cafe, or even inside an airplane. Also, good ideas always pop up in the least appropriate moment, so be sure to always carry something to write with, and something to write on.</p></li>
+</ol>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://gamedev.stackexchange.com/a/55453" title="short permalink to this answer" class="short-link" id="link-post-55453">share</a><span class="lsep">|</span><a href="http://gamedev.stackexchange.com/posts/55453/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://gamedev.stackexchange.com/posts/55453/revisions" title="show all edits to this post">edited <span title="2013-05-14 06:47:43Z" class="relativetime">May 14 '13 at 6:47</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-05-14 03:29:58Z" class="relativetime">May 14 '13 at 3:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://gamedev.stackexchange.com/users/22612/panda-pajama"><div class="gravatar-wrapper-32"><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/51r13.jpg" alt="" width="32" height="32" data-evernote-hover-show="true"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://gamedev.stackexchange.com/users/22612/panda-pajama">Panda Pajama</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 10,573" dir="ltr">10.6k</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="24 silver badges"><span class="badge2"></span><span class="badgecount">24</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-55453" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-96197" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">and those "scribbles" may well exist only in your mind, or follow no formal diagram convention whatsoever. And don't be afraid to adjust the design as you go along and gain new insights. Of course if you're working for others and they're solely responsible for the design you can't do that (though you may be able to make suggestions and requests), but if you're on your own go ahead and experiment. I often sit down and just start doing stuff, find a design evolve from what I'm doing until I have enough of an idea to formalise it in a diagram or document.</span>
+                    –&nbsp;<a href="http://gamedev.stackexchange.com/users/6169/jwenting" title="412 reputation" class="comment-user">jwenting</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#comment96197_55453"><span title="2013-05-14 05:55:47Z" class="relativetime-clean">May 14 '13 at 5:55</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-55453" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="55570"></a>
+<div id="answer-55570" class="answer" data-answerid="55570" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="55570">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>It may be worth pointing out a few design diagram talks from the Game Developers Conference 2013.  These are some very practical and road-tested examples -- and it seems they've been presented at many conferences across the years.</p>
+
+<p><em>(The other answers have done an admirable job of demonstrating why and how design-focused diagrams can be tremendously helpful in planning, building, growing, and maintaining a codebase, so I'll leave that aspect alone, and trust these resources might be useful to anyone visiting the question.)</em></p>
+
+<p>Joris Dormans and Ernest Adams discussed the <a href="http://www.jorisdormans.nl/machinations/wiki/index.php?title=Main_Page" rel="nofollow">Machinations</a> game design/balance diagramming system.  (Here's a paywalled <a href="http://www.gdcvault.com/play/1016458/Machinations-A-New-Way-to" rel="nofollow">GDC Vault video</a> from GDC EU 2012; <a href="http://www.jorisdormans.nl/machinations/wiki/index.php?title=GDC_2013" rel="nofollow">samples</a> from GDC 2013 on Dormans' wiki.) Rather than attempt to paraphrase, here's how the wiki describes the system:</p>
+
+<blockquote>Machinations is a theoretical framework and an interactive, dynamic, graphical representation that describes games as dynamic systems and focuses on closed feedback loops within them. The intention is to find a way to express and investigate (recurrent) game structures methodologically. Machinations offers a new lens on the intuitive and delicate practice of game design and balancing.</blockquote>
+
+<p>Noah Falstein gave a talk called "The Arcane Art of Puzzle Dependency Diagrams" (paywalled <a href="http://www.gdcvault.com/play/1017978/The-Arcane-Art-of-Puzzle" rel="nofollow">GDC Vault video</a>).  I can't find any non-paywalled link here, but various folks have discussed or posted their notes on-line.</p>
+
+<p>Both talks discussed when they created and how they maintained these diagrams, to one extent or another.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://gamedev.stackexchange.com/a/55570" title="short permalink to this answer" class="short-link" id="link-post-55570">share</a><span class="lsep">|</span><a href="http://gamedev.stackexchange.com/posts/55570/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-05-15 17:34:33Z" class="relativetime">May 15 '13 at 17:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://gamedev.stackexchange.com/users/1134/leander"><div class="gravatar-wrapper-32"><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/e78c0c9b7a58877a4f3e55784b8fd7b8" alt="" width="32" height="32" data-evernote-hover-show="true"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://gamedev.stackexchange.com/users/1134/leander">leander</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,459</span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-55570" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-55570" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="56659"></a>
+<div id="answer-56659" class="answer" data-answerid="56659" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="56659">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You should probably check this article about using a simple abstract grammar to describe your gameplay loop, how it can help you identify design problems, and how easy it is to iterate at that level.</p>
+
+<p><a href="http://www.gamasutra.com/blogs/JoshuaStarner/20130205/186060/Applying_Abstract_Models_to_Game_Design.php" rel="nofollow">http://www.gamasutra.com/blogs/JoshuaStarner/20130205/186060/Applying_Abstract_Models_to_Game_Design.php</a></p>
+
+<p>I can also point you toward my own work on the subject, more based on the economics of the gameplay loop, using abstract resources to track things like opportunities, luck or preparation:</p>
+
+<p><a href="http://www.stephanebura.com/diagrams/" rel="nofollow">http://www.stephanebura.com/diagrams/</a></p>
+
+<p>If you find this approach useful, you should have a look at Joris Dormans' Machinations, a tool for making such diagrams and running their simulations:</p>
+
+<p><a href="http://www.jorisdormans.nl/machinations/" rel="nofollow">http://www.jorisdormans.nl/machinations/</a></p>
+
+<p>His whole process is explained in his book: </p>
+
+<p><a href="http://rads.stackoverflow.com/amzn/click/0321820274" rel="nofollow">http://www.amazon.com/Game-Mechanics-Advanced-Design-Voices/dp/0321820274/</a></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://gamedev.stackexchange.com/a/56659" title="short permalink to this answer" class="short-link" id="link-post-56659">share</a><span class="lsep">|</span><a href="http://gamedev.stackexchange.com/posts/56659/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://gamedev.stackexchange.com/posts/56659/revisions" title="show all edits to this post">edited <span title="2013-06-02 18:12:20Z" class="relativetime">Jun 2 '13 at 18:12</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-06-02 18:02:20Z" class="relativetime">Jun 2 '13 at 18:02</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://gamedev.stackexchange.com/users/403/st%c3%a9phane-bura"><div class="gravatar-wrapper-32"><img src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/ad876276d9ab6491baba1f139f444af4" alt="" width="32" height="32" data-evernote-hover-show="true"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://gamedev.stackexchange.com/users/403/st%c3%a9phane-bura">Stéphane Bura</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">321</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-56659" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-56659" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+				
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://gamedev.stackexchange.com/questions/tagged/architecture" class="post-tag" title="show questions tagged &#39;architecture&#39;" rel="tag">architecture</a>  or <a href="http://gamedev.stackexchange.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2013-05-13 18:12:44Z"><b>3 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>9849 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games?lastactivity" class="lastactivity-link" title="2013-06-02 18:12:20Z">3 years ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1938080201",[5,17]).enableDynamicSiteSelection().setZone(56016); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1938080201"><div style="background-image: url( data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== ); width: 1px; height: 1px; display:none;"></div><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://gamedev.stackexchange.com/questions/55429/do-you-actually-use-diagrams-to-model-games#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./architecture - Do you actually use diagrams to model games_ - Game Development Stack Exchange_files/i(2).gif"></div>
+			
+
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/7713?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">17</div></a><a href="http://gamedev.stackexchange.com/questions/7713/mvc-model-view-controller-game-engine-architecture-yes-or-no?rq=1" class="question-hyperlink">MVC (Model-View-Controller) Game Engine Architecture - Yes or No?</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/17331?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">18</div></a><a href="http://gamedev.stackexchange.com/questions/17331/game-engine-and-data-driven-design?rq=1" class="question-hyperlink">Game engine and data driven design</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/18164?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">12</div></a><a href="http://gamedev.stackexchange.com/questions/18164/is-this-the-right-architecture-for-our-mmorpg-mobile-game?rq=1" class="question-hyperlink">Is this the right architecture for our MMORPG mobile game?</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/22483?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">6</div></a><a href="http://gamedev.stackexchange.com/questions/22483/should-i-use-inheritance-or-composition-for-modelling-game-objects?rq=1" class="question-hyperlink">Should I use inheritance or composition for modelling game objects?</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/29471?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">9</div></a><a href="http://gamedev.stackexchange.com/questions/29471/tactics-for-moving-the-render-logic-out-of-the-gameobject-class?rq=1" class="question-hyperlink">Tactics for moving the render logic out of the GameObject class</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/51536?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="http://gamedev.stackexchange.com/questions/51536/uml-class-diagrams-for-2d-platformer-games?rq=1" class="question-hyperlink">UML Class Diagrams for 2D platformer Games?</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/72082?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://gamedev.stackexchange.com/questions/72082/when-entities-dont-draw-themselves-who-actually-does?rq=1" class="question-hyperlink">When entities don't draw themselves, who actually does?</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/96303?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://gamedev.stackexchange.com/questions/96303/hiding-actual-ip-of-a-game-server?rq=1" class="question-hyperlink">Hiding actual IP of a Game Server</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/104708?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">3</div></a><a href="http://gamedev.stackexchange.com/questions/104708/diversified-game-object-list?rq=1" class="question-hyperlink">Diversified Game Object List</a></div><div class="spacer js-gps-track"><a href="http://gamedev.stackexchange.com/q/108255?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">1</div></a><a href="http://gamedev.stackexchange.com/questions/108255/animations-with-model-view-controller?rq=1" class="question-hyperlink">Animations with Model View Controller</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/343880/why-is-whomse-not-a-word" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is "whomse" not a word?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/75416/is-it-normal-for-a-phd-candidate-to-be-dissatisfied-with-their-phd-thesis-topic" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it normal for a PhD candidate to be dissatisfied with their PhD thesis topic, if the field is not hot?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1898825/is-this-a-new-method-for-finding-powers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is this a new method for finding powers?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/282717/whats-the-quickest-most-easily-repeatable-way-to-die-100-times" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What's the quickest, most easily repeatable way to die 100 times?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-chemistry" title="Chemistry Stack Exchange"></div><a href="http://chemistry.stackexchange.com/questions/57765/what-is-the-name-of-this-ester" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:431 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the name of this ester?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/1115774/what-does-hamp-means-computer-fan-context" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does HAMP means, computer fan context
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/77134/can-you-get-better-pricing-by-flying-without-checked-in-luggage-on-inter-contine" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can you get better pricing by flying without checked-in luggage on inter-continental airlines?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/275471/what-is-the-main-mechanism-that-heats-air-in-the-atmosphere" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the main mechanism that heats air in the atmosphere?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/325789/tabularx-neverending-rows" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Tabularx neverending rows
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/325784/horizontal-lines-of-table-has-different-length" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    horizontal lines of table has different length
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-networkengineering" title="Network Engineering Stack Exchange"></div><a href="http://networkengineering.stackexchange.com/questions/34117/does-having-a-longer-ethernet-cable-slow-your-connection" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:496 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does having a longer Ethernet cable slow your connection?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/138267/why-do-stormtroopers-wear-helmets-indoors" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do Stormtroopers wear helmets indoors?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/52219/how-long-would-a-single-metropolis-last-if-all-other-signs-of-human-civilization" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How long would a single metropolis last if all other signs of human civilization vanish?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="http://photo.stackexchange.com/questions/82118/why-doesnt-an-extension-tube-crop-the-picture" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why doesn't an extension tube "crop" the picture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/74504/how-do-i-get-a-management-position-without-management-experience" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I get a management position without management experience?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/124458/is-there-a-built-in-option-for-detecting-outliers-in-data" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a built-in option for detecting outliers in data?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/134228/is-it-safer-to-use-a-port-other-than-21-for-ftp" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it safer to use a port other than 21 for FTP?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/101132/where-you-going-is-right" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    "Where you going" is right?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/86707/can-i-begin-roleplaying-if-im-visually-impaired" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I begin roleplaying if I'm visually impaired?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/275363/are-there-fields-corresponding-to-the-composite-particles-e-g-hydrogen-atom-fi" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Are there fields corresponding to the composite particles (e.g. hydrogen atom field)?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/86590/can-you-drink-a-potion-one-handed-underwater" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can you drink a potion one-handed underwater?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/253458/74hc595-initial-output-voltage" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    74HC595 - Initial output voltage
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/75226/should-i-tell-students-that-its-my-first-time-teaching-the-course" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should I tell students that it's my first time teaching the course?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/253297/at-what-uart-baud-rate-is-hardware-flow-control-required" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    At what UART baud rate is hardware flow control required?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+		<script>
+StackExchange.ready(function(){$.get('/posts/55429/ivc/59a1');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/55429/ivc/59a1" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://gamedev.stackexchange.com/tour">tour</a>
+                    <a href="http://gamedev.stackexchange.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackexchange.com/?tab=site&amp;host=gamedev.stackexchange.com">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://gamedev.stackexchange.com/contact">contact us</a></b>
+                        <b><a href="http://meta.gamedev.stackexchange.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.8.19.3910
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Game Development Stack Exchange works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('architecture,x-community,x-host-gamedev.stackexchange.com');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            
+            ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+            ga('set', 'dimension2', '|architecture|');             ga('send', 'pageview');
+        
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+<span style="border: 1px solid rgb(204, 204, 204); border-radius: 3px; box-sizing: content-box; cursor: pointer; display: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; height: 16px; left: 181px; line-height: 14px; opacity: 0.95; padding: 2px 3px 1px; position: absolute; top: 1497px; z-index: 2147483647; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADeklEQVR42u1WX0hTYRS/TTRwS7AttQ0Rt1CGm2n5nzAdOJnO2Mac/9gc9GQPgfkSPVUvgURPQewliHqJoKcoopd6CKq3IggEi4rsDxqCRhbU6fe77aOLD+kd3rcd+Pju+fPd3znnO+fcqxWpSNslm83m4F5eXp6rqKhYqaysFJfLtVFVVfW4urr6iKXgpaWlIQDP8dnldH6pqakRj8cjdXV1Ul9fL16vd9Hn8x3GHgDvhXzPjoGXlZV12u32dUR8lnxtbe0qgKShoUH8fr8EAgEJBoPS3NzMnTzl1C/D7gHsTyJDJYWCBx0Ox1en0ylut/sCZY2NjesEaWlpkba2Nuns6JCuri7p7u7mTp5yXU872DNLs4WkfS8ivwTwnMftziGaKOV48UZHe7v09PRIb2+v9PX1Sai/X0KhEHfylOt62sGeGbmn7RQh0k8EIGA4HJZIJCJDQ0MyPDzMnTzlup52zMyh1tbnpoFQ6Rdxd9eQvhwiyOElOUR1ExH+Cg8M6GDHRkYkFotJIh6XRCLBnTzlup52sGc23pnFZ7X/RAHxDplGRqK/bHBwUEaiUYkDLJlMSiqVkjGusTHu5Cmnnna057lV0w6g1d6z2llIvEumkxHxpYw0NToq4+PjMjk5KVNTU2qRp5x62tGe58w7gD5/yFZj9Cwo3inTGs+DT0xM6IDpdFoymYxa5O9APg/9Auxoz3M/TDuAYXKZ/cyWYvQsLN4t08sIFfj09LRks1nJ/t3fqvPQ+2lHe54z7QCK7zjSz77mHbK6WWC8Y6ZZgSsH1FoBP4s1A/1R2NGe58w7gPtvwmTjcGF/M428UxYao2e6/wErRwzOQE872vPcd9MOYLbbMF6XUf28f/Y5W43VrhxQgK9VJgzXoRygPc+taoUQMnB1Gxm4vo0MfCzIAdTAAdTA4n9q4A2Wl1lQwCoT1Btq4KlWKKELStAFUXTBDVTzK1T1Wr4LfgNkTtkh+v1wIAPwJYIzekMX3NJ2ktDfu9Hndj4D7CDSHcMaxUqC3wfwl9CLYQ7Ma1YQIjy/aRK+yMvPbZqEaUscQHrvG74Fp7A35eUnNn0LILeAcLePDF9Dr0E+Y/gafsAo32WJAyjM24b/gbvYT4M/A/kzw//AFc0qAsDMFn9E3/Ax81kCrloUc2IOw+oJIv2Mfc3wT7iAORLRilSkLegPz4Fhh4IC9IkAAAAASUVORK5CYII=&quot;); background-color: rgb(255, 255, 255); background-size: 14px 14px; background-position: 1px 3px; background-repeat: no-repeat;"><span style="margin-left: 14px;">Remember</span></span></body></html>
