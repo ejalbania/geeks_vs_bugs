@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0172)https://tpc.googlesyndication.com/sadbundle/11959793288496584420/Proofpoints_336x280_B/index.html?csp=er3#t=15835703684879137925&p=https%3A%2F%2Fgoogleads.g.doubleclick.net -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./exitapi-impl.js" type="text/javascript"></script><script src="./addata.js" type="text/javascript"></script><title>336x280</title><meta content="width=336,height=280" name="ad.size"><script src="./cssplugin.min.js"></script><script src="./easepack.min.js"></script><script src="./TweenLite.min.js"></script><script>
+	var clickTag = "https://google.com";
+	function init(){
+		frame1Animation()
+		addevents()
+	}
+	function addevents(){
+		document.getElementById("bannerCTA").addEventListener("click", trackClick);	
+	}
+	function trackClick(){
+		window.open(clickTag,'_blank');
+	}
+	function frame1Animation(){
+        TweenLite.to(".bg",0.5,{delay:0, alpha:1})
+		TweenLite.to([".bg2",".copy_3"],0,{delay:0, alpha:1, x:336})
+        
+		
+		TweenLite.to(".logo",0.5,{alpha:1,delay:0})
+		TweenLite.to(".copy_1",0.5,{alpha:1, delay:0})
+		TweenLite.delayedCall(3,frame2Animation)
+	}
+	
+	function frame2Animation(){
+		TweenLite.to(".copy_1",0.7,{alpha:0, delay:0})
+		TweenLite.to(".copy_2",0.7,{alpha:1, delay:0.5})
+		TweenLite.delayedCall(3,frame3Animation)
+	}
+	
+	function frame3Animation(){
+		TweenLite.to([".bg",".copy_2"],0.7,{x:-336, ease:Quad.easeInOut,delay:0})
+		TweenLite.to([".bg2",".copy_3"],0.7,{x:0,alpha:1, ease:Quad.easeInOut, delay:0})
+		TweenLite.to(".cta",0.7,{alpha:1, delay:0.7})
+		TweenLite.delayedCall(3.6,animreset)
+	}
+	
+	
+	var loop=0;
+	
+	function animreset(){
+		if(loop<2){
+			loop++;
+			
+			TweenLite.to([".bg2",".copy_3",".cta"],0.5,{alpha:0,delay:0})
+			TweenLite.to([".bg",".copy_2"],0,{x:0, alpha:0, delay:0.5,onComplete:function(){
+				TweenLite.delayedCall(0,init)	
+			}})	
+		}
+		
+	}
+	
+</script><style>
+*{margin:0; padding:0;}
+.ad{position:relative; top:0; left:0; width:336px; height:280px; background-color:#ffffff; border:1px solid #bdbdbd; box-sizing:border-box; overflow: hidden; }
+.frame1,.frame2, .frame3{width:336px; height:280px; top:0px; left:0px; position:absolute;}
+.clickTag{width:336px;height:280px;display: block;position:absolute;cursor:pointer;left:0px;top:0px; z-index: 8;}
+.logo{position:absolute; top:0px; left:0px; z-index:2; opacity:0}
+.bg{position:absolute; top:-1px; opacity:1; left:0px; opacity:0;}
+.bg2{position:absolute; top:-1px; opacity:1; left:0px; opacity:0;}
+.bottom_box{position:absolute; top:0px; left:-1px; z-index:1;}
+.copy_1{position:absolute; top:0px; left:0px; z-index:1; opacity:0;}
+.copy_2{position:absolute; top:0px; left:0px; z-index:1; opacity:0;}
+.copy_3{position:absolute; top:0px; left:0px; z-index:1; opacity:0;}
+.cta{position:absolute; top:145px; left:87px; width:166px; height:39px; opacity:0; z-index:10; cursor:pointer; background:url(cta.png)0 0;}
+.cta:hover{position:absolute; background:url(cta.png)0 -40px;}
+
+</style><script type="text/javascript" src="./fv342kghuNUujcC_ClPUQ2k9fzbAyE7zuiriFiokw08.js"></script></head><body onload="init()" onclick="ExitApi.exit();" style="cursor:pointer">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="ad">
+        <div class="clickTag" id="bannerCTA"></div>
+    	<div class="frame1">
+			<img class="copy_1" src="./copy_1.png" style="opacity: 0;">
+			<img class="logo" src="./logo.png" style="opacity: 1;"> 
+            <div class="cta" onmouseup="trackClick()" style="opacity: 0.427716;"></div>
+        </div>
+        <div class="frame2">
+            <img class="bg" src="./bg.jpg" style="opacity: 1; transform: matrix(1, 0, 0, 1, -336, 0);"> 
+        	<img class="copy_2" src="./copy_2.png" style="opacity: 1; transform: matrix(1, 0, 0, 1, -336, 0);">
+        </div>
+        <div class="frame3">
+            <img class="bg2" src="./bg2.jpg" style="opacity: 0.427716; transform: matrix(1, 0, 0, 1, 0, 0);"> 
+        	<img class="copy_3" src="./copy_3.png" style="opacity: 0.427716; transform: matrix(1, 0, 0, 1, 0, 0);">
+        </div>
+        
+	</div>
+
+</body></html>
