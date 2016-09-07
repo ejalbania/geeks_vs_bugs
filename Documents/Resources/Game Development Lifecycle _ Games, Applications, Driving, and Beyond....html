@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Development Lifecycle | Games, Applications, Driving, and Beyond...</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://personanonymous.wordpress.com/xmlrpc.php">
+
+<link rel="alternate" type="application/rss+xml" title="Games, Applications, Driving, and Beyond... » Feed" href="https://personanonymous.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Games, Applications, Driving, and Beyond... » Comments Feed" href="https://personanonymous.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Games, Applications, Driving, and Beyond... » Game Development Lifecycle Comments Feed" href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/feed/">
+	<script async="" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/beacon.js"></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1461081265h&ver=4.5.3-20160628"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource" type="text/css" media="all">
+<link rel="stylesheet" id="sorbet-source-sans-pro-css" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/css" type="text/css" media="all">
+<link rel="stylesheet" id="sorbet-pt-serif-css" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-4" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(1)" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-5" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-6" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(2)" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(3)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://personanonymous.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="L. A. Noire" href="https://personanonymous.wordpress.com/2012/12/28/l-a-noire/">
+<link rel="next" title="Protected: Codename: Feline Project" href="https://personanonymous.wordpress.com/2013/01/14/codename-feline-project/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/">
+<link rel="shortlink" href="http://wp.me/pRs0I-9j">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fpersonanonymous.wordpress.com%2F2013%2F01%2F06%2Fgame-development-lifecycle%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fpersonanonymous.wordpress.com%2F2013%2F01%2F06%2Fgame-development-lifecycle%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Game Development Lifecycle">
+<meta property="og:url" content="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/">
+<meta property="og:description" content="Okay, here at last, I present you the continuation of my research: Game Development Lifecycle (GDLC). What is GDLC? In brief explanation, it’s an approach how to handle a game development pro…">
+<meta property="article:published_time" content="2013-01-05T18:41:27+00:00">
+<meta property="article:modified_time" content="2013-01-05T18:42:53+00:00">
+<meta property="og:site_name" content="Games, Applications, Driving, and Beyond...">
+<meta property="og:image" content="https://personanonymous.files.wordpress.com/2013/01/gdlc-phases.png?w=593">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:image" content="https://personanonymous.files.wordpress.com/2013/01/gdlc-phases.png?w=240">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://personanonymous.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://personanonymous.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://personanonymous.wordpress.com/osd.xml" title="Games, Applications, Driving, and Beyond...">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta name="application-name" content="Games, Applications, Driving, and Beyond..."><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Everyone knows about it...."><meta name="msapplication-task" content="name=Subscribe;action-uri=https://personanonymous.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="Game Development Lifecycle | Games, Applications, Driving, and Beyond... on WordPress.com">
+<meta name="description" content="Okay, here at last, I present you the continuation of my research: Game Development Lifecycle (GDLC). What is GDLC? In brief explanation, it&#39;s an approach how to handle a game development project. Why do you need GDLC? It&#39;s not that you&#39;ll really need it, but it&#39;ll guide you through needed steps to develop a game…">
+		<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/amzn_ads.js"></script>
+		<script type="text/javascript">
+		try { amznads.getAds("3033"); } catch(e) { /* ignore */ }
+		</script><script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/bid"></script>
+		<script type="text/javascript">
+		try {
+			var a9_p = amznads.getKeys(),
+			_ipw_custom = {
+				wordAds: '0',
+				adSafe: '0',
+				domain: 'personanonymous.wordpress.com',
+				pageURL: 'https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/'
+			};
+			if("undefined"!=typeof a9_p&&""!=a9_p&&null!==a9_p&&"[object Array]"===Object.prototype.toString.call(a9_p)){var a="",b=0,c=a9_p.length;a9_p.sort();for(var d=0;d<c;d++){a9_p[d-b]=a9_p[d-b].replace(/a1x6p/,"a160x600p");var e=a9_p[d-b].split("p");e[0]==a&&(a9_p.splice(d-b,1),b++);a=e[0]}_ipw_custom.amznPay=a9_p};document.close();
+		} catch(e) {}
+		</script>		<!-- IPONWEB header script -->
+		<script type="text/javascript">
+			window.__ATA = {
+				scriptSrc: '//s.pubmine.com/showad.js',
+				slotPrefix: 'automattic-id-',
+				initAd: function(o) {
+					var o = o || {},
+						g = window,
+						d = g.document,
+						wr = d.write,
+						id = g.__ATA.id();
+					wr.call(d, '<div id="' + id + '" data-section="' + (o.sectionId || 0) + '"' + (o.type ? ('data-type="' + o.type + '"') : '') + ' ' + (o.forcedUrl ? ('data-forcedurl="' + o.forcedUrl + '"') : '') + ' style="width:' + (o.width || 0) + 'px; height:' + (o.height || 0) + 'px;">');
+					g.__ATA.displayAd(id);
+					wr.call(d, '</div>');
+				},
+				displayAd: function(id) {
+					window.__ATA.ids = window.__ATA.ids || {};
+					window.__ATA.ids[id] = 1;
+				},
+				customParams: _ipw_custom,
+				id: function() {
+					return window.__ATA.slotPrefix + (parseInt(Math.random() * 10000, 10) + 1 + (new Date()).getMilliseconds());
+				}
+			};
+			(function(d, ata) {
+				var pr = "https:" === d.location.protocol ? "https:" : "http:",
+					src = pr + ata.scriptSrc,
+					st = "text/javascript";
+				d.write('<scr' + 'ipt type="' + st + '" src="' + src + '"><\/scr' + 'ipt>');
+			})(window.document, window.__ATA);
+		</script><script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/showad.js"></script>
+		<script type="text/javascript">
+		jQuery(window).ready(function () {
+			jQuery("a.wpa-about").text("About these ads");
+		});
+		</script><link rel="amphtml" href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/ga.js"></script>
+<script type="text/javascript" async="" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(4)"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/services.css"><script type="text/javascript" async="" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(5)"></script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body class="single single-post postid-577 single-format-standard mp6 customizer-styles-applied right-sidebar highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+				<div class="site-header-wrapper">
+			<div class="site-branding">
+				<h1 class="site-title"><a href="https://personanonymous.wordpress.com/" rel="home">Games, Applications, Driving, and Beyond…</a></h1>
+				<h2 class="site-description">Everyone knows about it….</h2>
+			</div>
+
+			<div class="toggles">
+				<div id="menu-toggle" class="toggle" title="Menu"><span class="screen-reader-text">Menu</span></div>
+												<div id="search-toggle" class="toggle" title="Search"><span class="screen-reader-text">Search</span></div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+	<div id="menu-toggle-nav" class="panel">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a class="skip-link screen-reader-text" href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#content">Skip to content</a>
+
+			<div class="menu-navbar-container"><ul id="menu-navbar" class="menu"><li id="menu-item-362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-362"><a href="https://personanonymous.wordpress.com/">Home</a></li>
+<li id="menu-item-363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="https://personanonymous.wordpress.com/about/">About</a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-360"><a href="https://personanonymous.wordpress.com/category/navbar/">Games</a></li>
+<li id="menu-item-806" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-806"><a href="https://personanonymous.wordpress.com/category/computer-technology-science/">Techs &amp; Science</a></li>
+<li id="menu-item-365" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-365"><a href="https://personanonymous.wordpress.com/category/reflective/">Reflective</a></li>
+<li id="menu-item-414" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-414"><a href="https://personanonymous.wordpress.com/category/final-project-thesis/">Thesis</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+	</div>
+			<div id="search-toggle-nav" class="panel">
+		<div class="search-wrapper">
+			<form role="search" method="get" class="search-form" action="https://personanonymous.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form>
+		</div>
+	</div>
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-577" class="post-577 post type-post status-publish format-standard hentry category-final-project-thesis category-navbar">
+	<header class="entry-header">
+				<h1 class="entry-title">Game Development Lifecycle</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Okay, here at last, I present you the continuation of my research: Game Development Lifecycle (GDLC).</p>
+<p>What is GDLC? In brief explanation, it’s an approach how to handle a game development project. Why do you need GDLC? It’s not that you’ll really need it, but it’ll guide you through needed steps to develop a game and minimize the risk.</p>
+<p>Refering to my <a title="Everybody can be a Game Developer" href="https://personanonymous.wordpress.com/2012/08/27/everybody-can-be-a-game-developer/">old post</a>, if you want to be a developer, you can start now. How to do that? Start reading now.</p>
+<p>To the main question: What steps need to be taken? In this post, I’ll present you my hypothesis of what GDLC phases should be taken.</p>
+<p><a href="https://personanonymous.files.wordpress.com/2013/01/gdlc-phases.png"><img class="aligncenter size-large wp-image-581" alt="GDLC Phases" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/gdlc-phases.png" data-evernote-hover-show="true"></a></p>
+<ol>
+<li>Initiation</li>
+<li>Team building</li>
+<li>Pre-production</li>
+<li>Production</li>
+<li>Alpha version</li>
+<li>Beta version</li>
+<li>Release version</li>
+</ol>
+<h3>1. Initiation</h3>
+<p>It’s all where it begins. Initiation is the part where you decide what kind of game you’ll make, who’s the hero, how to play the game, etc. It’s the very basic of game design/game concepting.</p>
+<p>To-do list:</p>
+<ul>
+<li>Define the game</li>
+<li>Look for publisher</li>
+</ul>
+<p>Useful pointer: Answer these question first!</p>
+<ul>
+<li><strong>Brainstorming!</strong></li>
+<li>What <strong>kind of game</strong> you’ll make?</li>
+<li>Who’s the <strong>hero/protagonist?</strong></li>
+<li>Will it be <strong>2D</strong> or <strong>3D</strong> game?</li>
+<li>What’s the <strong>theme?</strong></li>
+<li>What <strong>features</strong> it’ll be?</li>
+<li>Who’s your <strong>potential player</strong>/user? What <strong>gender,</strong> how <strong>old</strong> are they?</li>
+</ul>
+<p><span id="more-577"></span></p>
+<h3>2. Team Building</h3>
+<p>Team building is essentially the same as staffing. At first, the team you have maybe consists of 3 to 10 people. However, you know that you need some extra muscles to do the job, and ensure that the whole team have the same vision as you are (assuming you’re the project leader).</p>
+<p>To-do list:</p>
+<ul>
+<li>Staffing/hiring</li>
+<li>Create team structure</li>
+<li>Delegating jobs to members</li>
+<li>Goal/vision synchronization</li>
+</ul>
+<h3>3. Pre-production</h3>
+<p>One of the most important thing before jump directly to code the game: Pre-production. It’s the same as planning and designing the game itself.</p>
+<p>To-do list:</p>
+<ul>
+<li>Brainstorming! (again)</li>
+<li>Design the gameplay (core gameplay, mini games, etc)</li>
+<li>Define the art, style, and assets</li>
+<li>Choose the game engine and target platform</li>
+<li>Build prototype/mock-up/early design</li>
+<li>Create documentation: Art Design Document, Technical Design Document, Game Design Document</li>
+<li>Schedule planning</li>
+</ul>
+<h3>4. Production</h3>
+<p>It’s time to pour everything you’ve design to become a game. The longest and exhaustive phase of the game development, production deals with the game codes and assets themselves.</p>
+<p>To-do list:</p>
+<ul>
+<li>Coding (use framework/game engine to make it easier)</li>
+<li>Create assets (graphical and sound)</li>
+<li>Integrate source code and assets</li>
+<li>Giving milestone for each deliverable</li>
+<li>Evaluate</li>
+<li>Meeting</li>
+</ul>
+<h3>5. Alpha Version</h3>
+<p>Alpha version is the phase where the game itself is playable, but incomplete. For example, if the game has some playable level, it has already reach alpha version. Most of the core gameplay must be already included in the alpha version game.</p>
+<p>To-do list:</p>
+<ul>
+<li>Alpha testing (testing by fellow developer/another team member)</li>
+<li>Bug fixing</li>
+<li>Continue production</li>
+</ul>
+<p>Important note:</p>
+<ul>
+<li>Alpha version game means the <strong>whole gameplay concept</strong> is already <strong>fixed.</strong> No gameplay concept may change after a game is declared alpha, otherwise it’s not alpha.</li>
+<li>Alpha testing is used to check usability error</li>
+</ul>
+<h3>6. Beta Version</h3>
+<p>Beta version is the phase where all the game is all set. It means, beta version game is already a full game.</p>
+<p>To-do list:</p>
+<ul>
+<li>Beta testing (testing by 3rd party)</li>
+<li>Collecting user feedback</li>
+<li>Bug fixing</li>
+<li>Balancing</li>
+</ul>
+<p>Important note:</p>
+<ul>
+<li>Beta testing is used to <strong>expose bug, glitch,</strong> and <strong>exploits</strong> which encountered during the gameplay.</li>
+<li>Beta testing may be divided into 2 phase:<strong> open beta</strong>, where all the tester can freely join to participate, or <strong>closed beta</strong>, where all the tester are selected via test/invitation.</li>
+</ul>
+<h3>7. Release Version</h3>
+<p>It’s when all of the efforts rewarded. Release version means the game is ready to launch and to be shipped.&nbsp; Usually a game launching being held in somekind of party, but it’s entirely optional.</p>
+<p>To-do list:</p>
+<ul>
+<li>Game launching</li>
+<li>Maintenance!</li>
+</ul>
+<p>Useful pointer:</p>
+<ul>
+<li>Don’t stop the developement of the game when it’s already launched. Software patching, expanding the game via update, and maintenance become important thing in game development.</li>
+<li>Don’t lose connection with your publisher. If this project successful, they’re most likely willing to fund your new project.</li>
+</ul>
+		<div class="wpcnt">
+			<div class="wpa wpmrec">
+				<a class="wpa-about" href="https://wordpress.com/about-these-ads/" rel="nofollow">About these ads</a>
+				<div class="u">
+					<script type="text/javascript">
+					(function(g){g.__ATA.initAd({sectionId:26942, width:300, height:250});})(window);
+					</script><div id="automattic-id-10769" data-section="26942" style="width:300px; height:250px;"><iframe width="300" height="250" style="border:none;width:300px;height:250px;" frameborder="0" scrolling="no" name="fif_slot_automattic-id-_automattic-id-10769" id="fif_slot_automattic-id-_automattic-id-10769" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent;margin:0%;&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource.html"></iframe></div>
+				</div>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled"><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-12739060-577-57ccfee031c03" data-src="//widgets.wp.com/likes/#blog_id=12739060&amp;post_id=577&amp;origin=personanonymous.wordpress.com&amp;obj_id=12739060-577-57ccfee031c03" data-name="like-post-frame-12739060-577-57ccfee031c03"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-12739060-577-57ccfee031c03" height="55px" width="100%" frameborder="0" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(10).html"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="813" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://personanonymous.wordpress.com/2013/07/17/a-guidelines-of-game-development-life-cycle-v2-0/" title="A Guidelines of Game Development Life Cycle (v2.0)
+
+This is the revised version of my research during my thesis (see post here). There are many game developers who have proposed their own way to conduct a game development process, and each of them prove their method is successful. Here, in this post, I want to proposed a new…" rel="nofollow" data-origin="577" data-position="0">A Guidelines of Game Development Life Cycle (v2.0)</a></span><span class="jp-relatedposts-post-context">In "Computer, Technology, &amp; Science"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="842" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://personanonymous.wordpress.com/2013/08/16/done-or-a-new-beginning/" title="Done, or a New Beginning?
+
+Finally.... I mean, finally. It&#39;s been almost a year when I started to proposed the topic of game development life cycle to Mrs. YW, and it&#39;s finally done. August 15th 2013, the signatures have been given and it&#39;s finalized. It&#39;s written in Bahasa Indonesia, so sorry for the inconvenience. Well,…" rel="nofollow" data-origin="577" data-position="1">Done, or a New Beginning?</a></span><span class="jp-relatedposts-post-context">In "Final Project &amp; Thesis"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="406" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://personanonymous.wordpress.com/2012/08/08/final-project-part-2/" title="Final Project - part 2
+
+Alright, here I come. Well, I am happy. Yesterday, I decided to approach one of the software engineering teacher to ask about the topic of my final project. I know my friend, AR, and I would go separate ways if we come along to this way. He chose the NLP,…" rel="nofollow" data-origin="577" data-position="2">Final Project - part 2</a></span><span class="jp-relatedposts-post-context">In "Final Project &amp; Thesis"</span></p></div></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		<span class="post-date"><a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/" title="1:41 AM" rel="bookmark"><time class="entry-date" datetime="2013-01-06T01:41:27+00:00">Sunday, 6 January 2013</time></a></span><span class="byline"><span class="author vcard"><a class="url fn n" href="https://personanonymous.wordpress.com/author/personanonymous/" title="View all posts by Rido Ramadan" rel="author">Rido Ramadan</a></span></span>					</footer><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://personanonymous.wordpress.com/2012/12/28/l-a-noire/" rel="prev"><span class="meta-nav screen-reader-text">←</span></a></div><div class="nav-next"><a href="https://personanonymous.wordpress.com/2013/01/14/codename-feline-project/" rel="next"><span class="meta-nav screen-reader-text">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			5 thoughts on “<span>Game Development Lifecycle</span>”		</h2>
+
+		
+		<ol class="comment-list">
+			
+	<li id="comment-54" class="pingback even thread-even depth-1 highlander-comment">
+		<div class="comment-body">
+			Pingback: <a href="https://personanonymous.wordpress.com/2013/02/21/company-visit-evening-at-nightspade/" rel="external nofollow" class="url">Company Visit: Evening at Nightspade | Games, Applications, Driving, and Beyond…</a> 		</div>
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-62" class="pingback odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<div class="comment-body">
+			Pingback: <a href="https://personanonymous.wordpress.com/2013/07/17/a-guidelines-of-game-development-life-cycle-v2-0/" rel="external nofollow" class="url">A Guidelines of Game Development Life Cycle (v2.0) | Games, Applications, Driving, and Beyond...</a> 		</div>
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-206" class="pingback even thread-even depth-1 highlander-comment">
+		<div class="comment-body">
+			Pingback: <a href="https://pikachoosenews.wordpress.com/2016/03/29/the-aspiring-game-developers-struggle/" rel="external nofollow" class="url">The Aspiring Game Developers Struggle – Pika Choose News</a> 		</div>
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-209" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-209" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/32173c6776c186deb9d6e287fdddb5dd" class="avatar avatar-80 grav-hashed grav-hijack" height="80" width="80" id="grav-32173c6776c186deb9d6e287fdddb5dd-0" data-evernote-hover-show="true"></span>					<cite class="fn">Dsarts</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Really awesome<br>
+Keep it up</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/?replytocom=209#respond" onclick="return addComment.moveForm( &quot;div-comment-209&quot;, &quot;209&quot;, &quot;respond&quot;, &quot;577&quot; )" aria-label="Reply to Dsarts">Reply</a></div>				<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#comment-209">
+					<time datetime="2016-05-22T04:53:30+00:00">
+						<span class="post-date">Sunday, 22 May 2016 at 4:53 AM</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-216" class="pingback even thread-even depth-1 highlander-comment">
+		<div class="comment-body">
+			Pingback: <a href="https://mygamehasnoname.wordpress.com/2016/08/20/game-development-life-cycle/" rel="external nofollow" class="url">Game Development Life Cycle – mygamehasnoname – a 2D platformer in the making</a> 		</div>
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+					<div id="respond" class="comment-respond js">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="https://personanonymous.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="0a85de4845"><input type="hidden" name="_wp_http_referer" value="/2013/01/06/game-development-lifecycle/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: normal; width: 624px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 36px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(11).html" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav" data-evernote-hover-show="true">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/ad516503a11cd5ca435acc9bb6523536" alt="WordPress.com Logo" width="25" class="no-grav" data-evernote-hover-show="true">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your <span class="skimlinks-unlinked">WordPress.com</span> account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/ad516503a11cd5ca435acc9bb6523536" alt="Twitter picture" width="25" class="no-grav" data-evernote-hover-show="true">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/ad516503a11cd5ca435acc9bb6523536" alt="Facebook photo" width="25" class="no-grav" data-evernote-hover-show="true">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/ad516503a11cd5ca435acc9bb6523536" alt="Google+ photo" width="25" class="no-grav" data-evernote-hover-show="true">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="577" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9ad275544b"></p>
+<input type="hidden" name="genseq" value="1473052384">
+<p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1473052431225"></form>
+					</div><!-- #respond -->
+		<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<div id="secondary" class="widget-area" role="complementary">
+				<aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+	<li class="cat-item cat-item-172690769"><a href="https://personanonymous.wordpress.com/category/computer-technology-science/" title="All about techs and geeky things">Computer, Technology, &amp; Science</a> (22)
+<ul class="children">
+	<li class="cat-item cat-item-826835"><a href="https://personanonymous.wordpress.com/category/computer-technology-science/videophile/" title="Related to computer graphics technology, post-processing, high fidelity, and ultra-realism graphics.">Videophile</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-95332"><a href="https://personanonymous.wordpress.com/category/creativity-innovation/" title="Some products which came from human&#39;s creativity.">Creativity &amp; Innovation</a> (13)
+</li>
+	<li class="cat-item cat-item-860697"><a href="https://personanonymous.wordpress.com/category/final-project-thesis/" title="Research-based stories about the undergrad and post-grad thesis">Final Project &amp; Thesis</a> (8)
+</li>
+	<li class="cat-item cat-item-21"><a href="https://personanonymous.wordpress.com/category/navbar/" title="Everything about games I played, or I made">Navbar</a> (31)
+</li>
+	<li class="cat-item cat-item-30"><a href="https://personanonymous.wordpress.com/category/random/">Random</a> (2)
+</li>
+	<li class="cat-item cat-item-103922"><a href="https://personanonymous.wordpress.com/category/reflective/" title="Some stories of my life">Reflective</a> (29)
+<ul class="children">
+	<li class="cat-item cat-item-10166"><a href="https://personanonymous.wordpress.com/category/reflective/inspirational/" title="Some inspirational or motivational stories">Inspirational</a> (12)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-16998016"><a href="https://personanonymous.wordpress.com/category/trip-abroad/" title="Trips around the world I have done.">Trip Abroad</a> (2)
+</li>
+		</ul>
+</aside><aside id="top-posts-2" class="widget widget_top-posts"><h1 class="widget-title">Top Posts</h1><ul>				<li>
+										<a href="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/" class="bump-view" data-bump-view="tp">
+						Game Development Lifecycle					</a>
+									</li>
+							<li>
+										<a href="https://personanonymous.wordpress.com/2016/08/25/pokemon-go-a-case-of-game-design-mistake/" class="bump-view" data-bump-view="tp">
+						Pokémon GO: A Case of Game Design Mistake					</a>
+									</li>
+			</ul></aside><aside id="calendar-4" class="widget widget_calendar"><h1 class="widget-title">Calendar</h1><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>January 2013</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://personanonymous.wordpress.com/2012/12/">« Dec</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="https://personanonymous.wordpress.com/2013/02/">Feb »</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<td><a href="https://personanonymous.wordpress.com/2013/01/06/" aria-label="Posts published on January 6, 2013">6</a></td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td><a href="https://personanonymous.wordpress.com/2013/01/14/" aria-label="Posts published on January 14, 2013">14</a></td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td><a href="https://personanonymous.wordpress.com/2013/01/23/" aria-label="Posts published on January 23, 2013">23</a></td><td><a href="https://personanonymous.wordpress.com/2013/01/24/" aria-label="Posts published on January 24, 2013">24</a></td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="2">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside><aside id="archives-3" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+			<li><a href="https://personanonymous.wordpress.com/2016/08/">August 2016</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2016/03/">March 2016</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2016/01/">January 2016</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2015/09/">September 2015</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2015/08/">August 2015</a>&nbsp;(4)</li>
+	<li><a href="https://personanonymous.wordpress.com/2015/03/">March 2015</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2015/02/">February 2015</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2015/01/">January 2015</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/10/">October 2014</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/08/">August 2014</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/07/">July 2014</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/06/">June 2014</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/05/">May 2014</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/04/">April 2014</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/03/">March 2014</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/02/">February 2014</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2014/01/">January 2014</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/12/">December 2013</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/11/">November 2013</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/09/">September 2013</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/08/">August 2013</a>&nbsp;(3)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/07/">July 2013</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/06/">June 2013</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/05/">May 2013</a>&nbsp;(4)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/04/">April 2013</a>&nbsp;(10)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/02/">February 2013</a>&nbsp;(4)</li>
+	<li><a href="https://personanonymous.wordpress.com/2013/01/">January 2013</a>&nbsp;(4)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/12/">December 2012</a>&nbsp;(4)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/11/">November 2012</a>&nbsp;(3)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/10/">October 2012</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/09/">September 2012</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/08/">August 2012</a>&nbsp;(5)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/07/">July 2012</a>&nbsp;(4)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/06/">June 2012</a>&nbsp;(4)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/05/">May 2012</a>&nbsp;(2)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/04/">April 2012</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2012/01/">January 2012</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2011/12/">December 2011</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2011/07/">July 2011</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2011/05/">May 2011</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2011/04/">April 2011</a>&nbsp;(1)</li>
+	<li><a href="https://personanonymous.wordpress.com/2010/03/">March 2010</a>&nbsp;(1)</li>
+		</ul>
+		</aside>	</div><!-- #secondary -->
+
+	</div><!-- #content -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com.</a>
+			
+					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- wpcom_wp_footer -->
+<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-32173c6776c186deb9d6e287fdddb5dd">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/personanonymous.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/personanonymous.wordpress.com\/wp-login.php?action=logout&_wpnonce=9c43871fb9","homeURL":"https:\/\/personanonymous.wordpress.com\/","postID":"577","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(6)"></script>
+
+	<div id="bit" class="loggedout-follow-normal" style="bottom: -346px;">
+		<a class="bsub" href="javascript:void(0)"><span id="bsub-text">Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow “Games, Applications, Driving, and Beyond...”</label></h3>
+
+			<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 1,028 other followers</p>
+			<p><input type="email" name="email" placeholder="Enter your email address" id="loggedout-follow-field"></p>
+
+			<input type="hidden" name="action" value="subscribe">
+			<input type="hidden" name="blog_id" value="12739060">
+			<input type="hidden" name="source" value="https://personanonymous.wordpress.com/2013/01/06/game-development-lifecycle/">
+			<input type="hidden" name="sub-type" value="loggedout-follow">
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="846d254bcd"><input type="hidden" name="_wp_http_referer" value="/2013/01/06/game-development-lifecycle/">
+			<p id="bsub-subscribe-button"><input type="submit" value="Sign me up"></p>
+			</form>
+					<div id="bsub-credit"><a href="https://wordpress.com/?ref=lof">Build a website with WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/form.js"></script>
+<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/saved_resource(7)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "personanonymous.wordpress.com";
+	</script>
+	<script type="text/javascript" src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/725X1342.skimlinks.js"></script>		<iframe src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script>
+			var _comscore = _comscore || [];
+			_comscore.push({
+				c1: "2",
+				c2: "7518284"
+			});
+			(function() {
+				var s = document.createElement("script"),
+					el = document.getElementsByTagName("script")[0];
+				s.async = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+		<noscript>
+			&lt;p class="robots-nocontent"&gt;&lt;img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=7518284&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cv=2.0&amp;cj=1" alt="" style="display:none;" width="1" height="1" /&gt;&lt;/p&gt;
+		</noscript><script src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'12739060','blog_tz':'7','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'12739060','v':'wpcom','tz':'7','user_id':'0','post':'577','subd':'personanonymous'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhRaTR1cH5qamxuMVpfMFVLeX5oVFQyK0EmQUR4fkVCVXlEdUQ4MVVnd1dBQk5bem1YKy8vRkE4YXc2bDNqd0pXSXxnY1hDc2t0Ni9zK184MTM0Lz1BRm5GWW1OUTBXUlBmbFNvblAxcVBpS2tZQXcmMHRwfEl1LzdVVmJvLk18TzFuME5aOGVCSEQ9ZFBaZkRXXUZvd0hldTJnYVNIUG9DQ3VMY0ovWCZwdDgxcyVtUmtDYzNmc2M0T2JMR3k4SkRLJk5SPV1MXUdtd1NPQlk9cGN5dF9SZG1fMQ=='}]);
+_stq.push([ 'clickTrackerInit', '12739060', '577' ]);
+	</script>
+<noscript>&lt;img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+<img src="./Game Development Lifecycle _ Games, Applications, Driving, and Beyond..._files/g.gif" alt=":)" id="wpstats" data-evernote-hover-show="true"><span style="border: 1px solid rgb(204, 204, 204); border-radius: 3px; box-sizing: content-box; cursor: pointer; display: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; height: 16px; left: 177px; line-height: 14px; opacity: 0.95; padding: 2px 3px 1px; position: absolute; top: 664px; z-index: 2147483647; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADeklEQVR42u1WX0hTYRS/TTRwS7AttQ0Rt1CGm2n5nzAdOJnO2Mac/9gc9GQPgfkSPVUvgURPQewliHqJoKcoopd6CKq3IggEi4rsDxqCRhbU6fe77aOLD+kd3rcd+Pju+fPd3znnO+fcqxWpSNslm83m4F5eXp6rqKhYqaysFJfLtVFVVfW4urr6iKXgpaWlIQDP8dnldH6pqakRj8cjdXV1Ul9fL16vd9Hn8x3GHgDvhXzPjoGXlZV12u32dUR8lnxtbe0qgKShoUH8fr8EAgEJBoPS3NzMnTzl1C/D7gHsTyJDJYWCBx0Ox1en0ylut/sCZY2NjesEaWlpkba2Nuns6JCuri7p7u7mTp5yXU872DNLs4WkfS8ivwTwnMftziGaKOV48UZHe7v09PRIb2+v9PX1Sai/X0KhEHfylOt62sGeGbmn7RQh0k8EIGA4HJZIJCJDQ0MyPDzMnTzlup52zMyh1tbnpoFQ6Rdxd9eQvhwiyOElOUR1ExH+Cg8M6GDHRkYkFotJIh6XRCLBnTzlup52sGc23pnFZ7X/RAHxDplGRqK/bHBwUEaiUYkDLJlMSiqVkjGusTHu5Cmnnna057lV0w6g1d6z2llIvEumkxHxpYw0NToq4+PjMjk5KVNTU2qRp5x62tGe58w7gD5/yFZj9Cwo3inTGs+DT0xM6IDpdFoymYxa5O9APg/9Auxoz3M/TDuAYXKZ/cyWYvQsLN4t08sIFfj09LRks1nJ/t3fqvPQ+2lHe54z7QCK7zjSz77mHbK6WWC8Y6ZZgSsH1FoBP4s1A/1R2NGe58w7gPtvwmTjcGF/M428UxYao2e6/wErRwzOQE872vPcd9MOYLbbMF6XUf28f/Y5W43VrhxQgK9VJgzXoRygPc+taoUQMnB1Gxm4vo0MfCzIAdTAAdTA4n9q4A2Wl1lQwCoT1Btq4KlWKKELStAFUXTBDVTzK1T1Wr4LfgNkTtkh+v1wIAPwJYIzekMX3NJ2ktDfu9Hndj4D7CDSHcMaxUqC3wfwl9CLYQ7Ma1YQIjy/aRK+yMvPbZqEaUscQHrvG74Fp7A35eUnNn0LILeAcLePDF9Dr0E+Y/gafsAo32WJAyjM24b/gbvYT4M/A/kzw//AFc0qAsDMFn9E3/Ax81kCrloUc2IOw+oJIv2Mfc3wT7iAORLRilSkLegPz4Fhh4IC9IkAAAAASUVORK5CYII=&quot;); background-color: rgb(255, 255, 255); background-size: 14px 14px; background-position: 1px 3px; background-repeat: no-repeat;"><span style="margin-left: 14px;">Remember</span></span></body></html>
