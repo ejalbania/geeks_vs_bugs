@@ -1,0 +1,1 @@
+document.write('<a target=\"_blank\" href=\"https://optimized-by.rubiconproject.com/t/1032/13817/89639-2.3257179.3294593?url=http%3A%2F%2Fwww.casaforchildren.org%2Fliftup\"><img border=\"0\" src=\"https://secure-assets.rubiconproject.com/static/psa/casala/CASALA_leaderboard_ad.gif\" alt=\"Support Casa LA\"></a>\n'); 
